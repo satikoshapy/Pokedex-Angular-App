@@ -1,0 +1,12 @@
+body {
+    display: flex;
+
+}
+
+app-sidebar {
+    width: 30%;
+}
+
+app-main {
+    width: 70%;
+}

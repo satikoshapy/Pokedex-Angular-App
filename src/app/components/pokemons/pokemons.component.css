@@ -1,0 +1,28 @@
+.pokemon-box {
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    box-shadow: gray 0 1px 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+
+}
+
+.image {
+    width: 25%;
+}
+
+.image img {
+    width: 100%;
+}
+
+.pokemon-name {
+    width: 22%;
+}
+
+.types {
+    width: 48%;
+    display: flex;
+    flex-direction: row;
+}

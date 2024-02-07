@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="filter">
+        <fa-icon [icon]="faFilter"></fa-icon>
+        <fa-icon [icon]="faSort"></fa-icon>
+    </div>
+    <h1>Pokedex</h1>
+    <div class="links-container">
+        <a href="" class="team"> 
+            <img src="../../../assets/Pokeball-PNG.png" alt="">
+            <h3>Mijn team</h3>
+            <p>test</p>
+        </a>
+        <a href="" class="favorites">
+            <img src="../../../assets/Pokeball-PNG.png"  alt="">
+            <h3>Favorieten</h3>
+            <p>test</p>
+        </a>
+    </div>
+    <div class="pokemon-scrollbar">
+        <div *ngFor="let pokemon of pokemons">
+            <app-pokemons [pokemon]="pokemon"></app-pokemons>
+        </div>
+        
+    </div>
+</div>
