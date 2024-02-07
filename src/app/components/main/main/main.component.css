@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+
+}
+
+section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+app-heart {
+    position: absolute;
+    top: 20px;
+    right: 0;
+}

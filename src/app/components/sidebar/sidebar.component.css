@@ -1,0 +1,60 @@
+.filter {
+    width: 100%;
+}
+
+.filter fa-icon {
+    float: right;
+}
+
+.links-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links-container a {
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    width: 48%;
+    padding: 0;
+    height: 90px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+.links-container a h3, p {
+    margin: 5px;
+}
+
+.links-container a img{
+    position: absolute;
+    top: -10px;
+    right: -70px;
+    width: 180px;
+    opacity: 0.5;
+}
+
+.team {
+    background: linear-gradient(to right, #46469C 0%, #7E32E0 100%);
+}
+
+.favorites {
+    background: linear-gradient(to right, #65CB9A 0%, #15D0DC 100%);;
+}
+
+
+.pokemon-scrollbar {
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 400px;
+    padding: 0;
+    text-decoration: none;
+    margin-top: 10px;
+    scrollbar-width: 0;
+}
