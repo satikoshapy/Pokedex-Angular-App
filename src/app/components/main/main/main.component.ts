@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges} from '@angular/core';
 import { PokemonService } from '../../../services/pokemon.service';
 import { Pokemon } from '../../../Pokemon'
 
@@ -9,7 +9,9 @@ import { Pokemon } from '../../../Pokemon'
 })
 export class MainComponent 	implements OnInit {
   @Input() pokemons: Pokemon[] = [];
-  pokemon!: Pokemon;
+  @Input() selectedPokemon!: Pokemon;
+  initialPokemon!: Pokemon;
+  pokemon:Pokemon = this.selectedPokemon;
 
   
 
@@ -20,9 +22,21 @@ export class MainComponent 	implements OnInit {
 
   ngOnInit(): void {
     this.pokemonService.getOnePokemon().subscribe((pokemon) => {
-      this.pokemon = pokemon;
+      this.selectedPokemon = pokemon;
     
   })
 
 }
+
+// ngOnChanges(changes: SimpleChanges): void {
+  
+//     this.pokemon = this.selectedPokemon;
+//     console.log("new change")
+//     console.log(this.selectedPokemon);
+    
+//   }
+
+
+
+
 }

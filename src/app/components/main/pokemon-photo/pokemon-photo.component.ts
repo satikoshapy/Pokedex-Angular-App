@@ -9,7 +9,6 @@ import {Pokemon } from '../../../Pokemon';
 export class PokemonPhotoComponent 	implements OnInit {
   @Input() pokemon!: Pokemon;
 
-
   constructor() { }
 
 

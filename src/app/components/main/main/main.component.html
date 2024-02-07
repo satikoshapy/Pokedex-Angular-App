@@ -1,12 +1,10 @@
-<div class="container">
+<div class="container" >
     <app-heart></app-heart>
     <section class="left-side">
-        <h1>Side bar</h1>
-        <app-pokemon-photo [pokemon]="pokemon"></app-pokemon-photo>
+        <app-pokemon-photo [pokemon]="selectedPokemon"></app-pokemon-photo>
         <app-info></app-info>
     </section>
     <section class="right-side">
-        <h1>Main </h1>
         <app-statistics></app-statistics>
         <app-moveset></app-moveset>
         <div class="evolution">

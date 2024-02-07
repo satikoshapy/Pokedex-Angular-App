@@ -18,7 +18,7 @@
     </div>
     <div class="pokemon-scrollbar">
         <div *ngFor="let pokemon of pokemons">
-            <app-pokemons [pokemon]="pokemon"></app-pokemons>
+            <app-pokemons [pokemon]="pokemon" (choosePokemonClick)="onChosenPokemon($event)"></app-pokemons>
         </div>
         
     </div>

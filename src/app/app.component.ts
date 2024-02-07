@@ -13,6 +13,8 @@ export class AppComponent implements OnInit{
   title = 'pokedex-angular-app';
   faHeart = faHeart;
   pokemons:Pokemon[] = [];
+  selectedPokemon!:Pokemon;
+  initialPokemon!:Pokemon;
 
 
   constructor(private pokemonService:PokemonService){
@@ -30,6 +32,12 @@ export class AppComponent implements OnInit{
         });
       }
     });
+
+    this.initialPokemon = this.pokemons[0];
+  }
+
+  onSidetoMain(pokemon:Pokemon){
+      this.selectedPokemon = pokemon;
   }
 
 }

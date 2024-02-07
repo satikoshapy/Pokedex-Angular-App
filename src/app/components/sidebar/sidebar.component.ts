@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 import { Pokemon } from '../../Pokemon';
 import { faFilter, faArrowDownUpAcrossLine} from '@fortawesome/free-solid-svg-icons';
 
@@ -11,11 +11,16 @@ export class SidebarComponent implements OnInit {
   faFilter = faFilter;
   faSort = faArrowDownUpAcrossLine;
   @Input() pokemons: Pokemon[] = [];
+  @Output() selectedPokemon:EventEmitter<Pokemon> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
 
+  }
+
+  onChosenPokemon(pokemon:Pokemon){
+      this.selectedPokemon.emit(pokemon);
   }
 
 
