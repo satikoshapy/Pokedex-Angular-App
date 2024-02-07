@@ -1,1 +1,25 @@
-<div class="container"><p>info works!</p></div>
+<div class="white-container container">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem iusto consectetur optio eum est excepturi aperiam, eius amet ea ut sapiente distinctio totam facilis temporibus velit nisi numquam esse atque.</p>
+    <div class="lightgray-text">
+        <p>Type</p>
+        <p>Nummer</p>
+        <p>Gewicht</p>
+        <p>Hoogte</p>
+        <p>Categorie</p>
+        <p>Geslacht</p>
+        <p>Vaardigheden</p>
+    </div>
+    <div>
+        <div class="types" >
+            <div *ngFor="let type of pokemon.types">
+                 <p>{{type.type.name}}</p>
+            </div>
+        </div>
+        <p>{{pokemon.order}}</p>
+        <p>{{pokemon.weight}}kg</p>
+        <p>{{pokemon.height}}</p>
+        <p>seed</p>
+        <p>genden</p>
+        <p>ability</p>
+    </div>
+</div>

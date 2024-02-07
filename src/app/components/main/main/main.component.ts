@@ -11,7 +11,7 @@ export class MainComponent 	implements OnInit {
   @Input() pokemons: Pokemon[] = [];
   @Input() selectedPokemon!: Pokemon;
   initialPokemon!: Pokemon;
-  pokemon:Pokemon = this.selectedPokemon;
+  //pokemon:Pokemon = this.selectedPokemon;
 
   
 
@@ -28,13 +28,13 @@ export class MainComponent 	implements OnInit {
 
 }
 
-// ngOnChanges(changes: SimpleChanges): void {
+ngOnChanges(changes: SimpleChanges): void {
   
-//     this.pokemon = this.selectedPokemon;
-//     console.log("new change")
-//     console.log(this.selectedPokemon);
+    //this.selectedPokemon = changes.selectedPokemon.currentValue;
+    console.log("new change")
+    console.log(this.selectedPokemon);
     
-//   }
+  }
 
 
 

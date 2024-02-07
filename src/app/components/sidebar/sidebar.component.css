@@ -52,7 +52,7 @@
 .pokemon-scrollbar {
     overflow: scroll;
     overflow-x: hidden;
-    height: 400px;
+    height: 600px;
     padding: 0;
     text-decoration: none;
     margin-top: 10px;
