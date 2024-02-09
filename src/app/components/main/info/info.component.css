@@ -10,3 +10,8 @@
 .white-container div {
     width: 50%;
 }
+
+.types {
+    display: flex;
+    flex-direction: row;
+}

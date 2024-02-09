@@ -1,6 +1,10 @@
 export interface Pokemon {
     id: number;
     name: string;
+    abilities: {
+      ability: NameAndURL;
+      is_hidden: boolean;
+      slot: number}[];
     forms: NameAndURL[]; // You might want to create a specific interface for forms
     height: number;
     is_default: boolean;
@@ -72,6 +76,8 @@ export interface Pokemon {
     {flavor_text: string;
     }[]
   }
+
+  
   
 
 
