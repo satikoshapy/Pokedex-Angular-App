@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { PokemonService } from './services/pokemon.service';
-import { Pokemon } from './Pokemon';
+import { Pokemon, species } from './Pokemon';
 
 
 @Component({
@@ -14,7 +14,8 @@ export class AppComponent implements OnInit{
   faHeart = faHeart;
   pokemons:Pokemon[] = [];
   selectedPokemon!:Pokemon;
-  initialPokemon!:Pokemon;
+  //initialPokemon!:Pokemon;
+  pokemonSpecies!:species
 
 
   constructor(private pokemonService:PokemonService){
@@ -33,11 +34,16 @@ export class AppComponent implements OnInit{
       }
     });
 
-    this.initialPokemon = this.pokemons[0];
+    //this.initialPokemon = this.pokemons[0];
+   
+    
   }
 
   onSidetoMain(pokemon:Pokemon){
       this.selectedPokemon = pokemon;
+      this.pokemonService.getPokemonSpeciesByID(pokemon.id).subscribe((species) => {
+        this.pokemonSpecies = species;
+      })
   }
 
 }

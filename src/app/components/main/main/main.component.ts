@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges} from '@angular/core';
 import { PokemonService } from '../../../services/pokemon.service';
-import { Pokemon } from '../../../Pokemon'
+import { Pokemon, species } from '../../../Pokemon'
 
 @Component({
   selector: 'app-main',
@@ -11,7 +11,7 @@ export class MainComponent 	implements OnInit {
   @Input() pokemons: Pokemon[] = [];
   @Input() selectedPokemon!: Pokemon;
   initialPokemon!: Pokemon;
-  //pokemon:Pokemon = this.selectedPokemon;
+  @Input() pokemonSpecies!:species;
 
   
 
@@ -24,7 +24,12 @@ export class MainComponent 	implements OnInit {
     this.pokemonService.getOnePokemon().subscribe((pokemon) => {
       this.selectedPokemon = pokemon;
     
-  })
+      this.pokemonService.getPokemonSpeciesByID(this.selectedPokemon.id).subscribe((species) => {
+        this.pokemonSpecies = species;})
+      })
+    
+    
+
 
 }
 
